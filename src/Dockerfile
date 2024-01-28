@@ -8,6 +8,6 @@ RUN mvn clean install
 # Stage 2: Production Stage
 FROM openjdk:17-jdk-slim
 EXPOSE 8080
-COPY --from=build /target/exercicio3-0.0.7-SNAPSHOT.jar /app/app.jar
+COPY --from=build /Exercicio3-login-e-envio-de-email/target/exercicio3-0.0.8-SNAPSHOT.jar /app/app.jar
 WORKDIR /app
 ENTRYPOINT ["java","-jar","app.jar"]
